@@ -232,6 +232,104 @@ padding:80px 20px;
 }
 
 </style>
+  /* =========================
+   RESPONSIVIDADE GERAL
+========================= */
+
+img, div, section {
+  max-width: 100%;
+}
+
+/* telas médias (tablets) */
+@media (max-width: 900px) {
+
+  .logo {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .omnitrix {
+    width: 220px;
+    height: 220px;
+  }
+
+  .bar {
+    width: 80%;
+  }
+
+  .aliens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* celulares */
+@media (max-width: 600px) {
+
+  .logo {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .omnitrix {
+    width: 180px;
+    height: 180px;
+  }
+
+  .panel {
+    padding: 20px;
+  }
+
+  #countdown {
+    font-size: 26px;
+  }
+
+  .aliens {
+    grid-template-columns: 1fr;
+  }
+
+  .alien {
+    height: auto;
+    padding: 15px;
+  }
+
+  .btn {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    font-size: 16px;
+  }
+}
+
+/* telas muito pequenas */
+@media (max-width: 400px) {
+
+  .logo {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .omnitrix {
+    width: 150px;
+    height: 150px;
+  }
+}
 </head>
 
 <body>
@@ -531,19 +629,16 @@ seconds+" SEGUNDOS";
 }
 
 setInterval(updateCountdown,1000);
-function copiarPix(){
 
-function copiarPix(){
+function copiarPix() {
+  navigator.clipboard.writeText("135.819.519-67");
 
-navigator.clipboard.writeText("135.819.519-67");
-
-document.getElementById("pixMsg").innerHTML =
-"✅ Chave PIX copiada para a área de transferência!";
+  document.getElementById("pixMsg").innerHTML =
+    "✅ Chave PIX copiada para a área de transferência!";
+}
 
 }
 
-document.getElementById("pixMsg").innerHTML =
-"✅ Chave PIX copiada para a área de transferência!";
 
 }
 updateCountdown();
